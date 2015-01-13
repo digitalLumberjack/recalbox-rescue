@@ -3,6 +3,8 @@
 
 retrobox-rescue allows you to create a sdCARD with the last version of retroboxOS.
 
+See https://github.com/digitalLumberjack/retrobox-os for easy install and compile.
+
 The system is based on NOOBS : see https://github.com/raspberrypi/noobs
 
 Compilation :
@@ -11,7 +13,8 @@ Compilation :
 
 Then you have to compile https://github.com/digitalLumberjack/retrobox-buildroot and copy created root.tar.xz, boot.tar.xs and share.tar.xz to retrobox-rescue/output/os/retroboxOS/
 
-See the createRetroboxSystem.sh script that will create the whole system for you.
+Or use the createRetroboxSystem.sh script that will create the whole system for you : 
+https://github.com/digitalLumberjack/retrobox-os/releases
 
 ### Legal compliance
 
