@@ -1,7 +1,7 @@
 {
   "name": "retroboxOS",
-  "version": "2.6.5",
-  "release_date": "2015-01-12",
+  "version": "2.6.6",
+  "release_date": "2015-01-14",
   "kernel": "3.12",
   "description": "The retrobox operating system.",
   "url": "http://www.retrobox.fr/"
