@@ -1,0 +1,8 @@
+{
+  "name": "recalboxOS",
+  "version": "3.0.0",
+  "release_date": "2015-01-26",
+  "kernel": "3.12",
+  "description": "The recalbox operating system.",
+  "url": "http://www.recalbox.com/"
+}

@@ -21,7 +21,7 @@
 #define HOMEPAGE  "http://www.raspberrypi.org/help/"
 
 /* Location to download the list of available distributions from */
-#define DEFAULT_REPO_SERVER  "http://archive.retrobox.fr/os_list.json"
+#define DEFAULT_REPO_SERVER  "http://archive.recalbox.com/os_list.json"
 
 /* Size of recovery FAT partition in MB.
  * First partition starts at offset 1 MB (sector 2048)
