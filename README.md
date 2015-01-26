@@ -1,9 +1,9 @@
-# Retrobox Install / Rescue system
-#### An easy RetroboxOS installer
+# Recalbox Install / Rescue system
+#### An easy recalboxOS installer
 
-retrobox-rescue allows you to create a sdCARD with the last version of retroboxOS.
+recalbox-rescue allows you to create a sdCARD with the last version of recalboxOS.
 
-See https://github.com/digitalLumberjack/retrobox-os for easy install and compile.
+See https://github.com/digitalLumberjack/recalbox-os for easy install and compile.
 
 The system is based on NOOBS : see https://github.com/raspberrypi/noobs
 
@@ -11,10 +11,10 @@ Compilation :
 
 ./BUILDME.sh
 
-Then you have to compile https://github.com/digitalLumberjack/retrobox-buildroot and copy created root.tar.xz, boot.tar.xs and share.tar.xz to retrobox-rescue/output/os/retroboxOS/
+Then you have to compile https://github.com/digitalLumberjack/recalbox-buildroot and copy created root.tar.xz, boot.tar.xs and share.tar.xz to recalbox-rescue/output/os/recalboxOS/
 
-Or use the createRetroboxSystem.sh script that will create the whole system for you : 
-https://github.com/digitalLumberjack/retrobox-os/releases
+Or use the createRecalboxSystem.sh script that will create the whole system for you : 
+https://github.com/digitalLumberjack/recalbox-os/releases
 
 ### Legal compliance
 
