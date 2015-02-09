@@ -355,6 +355,7 @@ bool canInstallOs(const QString& name, const QVariantMap& values)
 /* Whether this OS is supported */
 bool isSupportedOs(const QString& name, const QVariantMap& values)
 {
+    return true;
     /* Can't simply pull "name" from "values" because in some JSON files it's "os_name" and in others it's "name" */
 
     /* If it's not bootable, it isn't really an OS, so is always supported */
