@@ -329,33 +329,10 @@ void MainWindow::repopulate()
     }
 }
 
-/* Whether this OS should be displayed in the list of installable OSes */
-bool canInstallOs(const QString& name, const QVariantMap& values)
-{
-    /* Can't simply pull "name" from "values" because in some JSON files it's "os_name" and in others it's "name" */
-
-    /* If it's not bootable, it isn't really an OS, so is always installable */
-    if (!canBootOs(name, values))
-    {
-        return true;
-    }
-
-    /* RISC_OS needs a matching riscos_offset */
-    if (nameMatchesRiscOS(name))
-    {
-        if (!values.contains(RISCOS_OFFSET_KEY) || (values.value(RISCOS_OFFSET_KEY).toInt() != RISCOS_OFFSET))
-        {
-            return false;
-        }
-    }
-
-    return true;
-}
 
 /* Whether this OS is supported */
 bool isSupportedOs(const QString& name, const QVariantMap& values)
 {
-    return true;
     /* Can't simply pull "name" from "values" because in some JSON files it's "os_name" and in others it's "name" */
 
     /* If it's not bootable, it isn't really an OS, so is always supported */
@@ -420,6 +397,28 @@ bool isSupportedOs(const QString& name, const QVariantMap& values)
     }
 
     return true;
+}
+/* Whether this OS should be displayed in the list of installable OSes */
+bool canInstallOs(const QString& name, const QVariantMap& values)
+{
+    /* Can't simply pull "name" from "values" because in some JSON files it's "os_name" and in others it's "name" */
+
+    /* If it's not bootable, it isn't really an OS, so is always installable */
+    if (!canBootOs(name, values))
+    {
+        return true;
+    }
+
+    /* RISC_OS needs a matching riscos_offset */
+    if (nameMatchesRiscOS(name))
+    {
+        if (!values.contains(RISCOS_OFFSET_KEY) || (values.value(RISCOS_OFFSET_KEY).toInt() != RISCOS_OFFSET))
+        {
+            return false;
+        }
+    }
+
+    return isSupportedOs(name, values);
 }
 
 QMap<QString, QVariantMap> MainWindow::listImages()
