@@ -313,7 +313,7 @@ WARNING: This will erase all data on your SD card</source>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="+256"/>
-        <location line="+863"/>
+        <location line="+864"/>
         <source>RECOMMENDED</source>
         <translation>RECOMENDADO</translation>
     </message>
@@ -329,7 +329,7 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-548"/>
+        <location line="-549"/>
         <source>Setting up SD card</source>
         <translation>Configurando cartão SD</translation>
     </message>
@@ -354,7 +354,7 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+364"/>
+        <location line="+365"/>
         <source>Warning: this will install the selected Operating System(s). All existing data on the SD card will be overwritten, including any OSes that are already installed.</source>
         <oldsource>Warning: this will install the selected Operating System. All existing data on the SD card will be overwritten.</oldsource>
         <translation type="unfinished">Você tem certeza que deseja gravar a imagem? ISSO EXCLUIRÁ TODOS OS DADOS EXISTENTES!</translation>
@@ -366,12 +366,12 @@ WARNING: This will erase all data on your SD card</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-759"/>
+        <location line="-760"/>
         <source>INSTALLED</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+479"/>
+        <location line="+480"/>
         <source>Display Mode Changed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -381,12 +381,12 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-529"/>
+        <location line="-530"/>
         <source>Please wait while NOOBS initialises</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+404"/>
+        <location line="+405"/>
         <source>Warning: incompatible Operating System(s) detected. The following OSes aren&apos;t supported on this revision of Raspberry Pi and may fail to boot or function correctly:</source>
         <translation type="unfinished"></translation>
     </message>
