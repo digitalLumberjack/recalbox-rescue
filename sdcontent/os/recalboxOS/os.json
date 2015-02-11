@@ -1,7 +1,7 @@
 {
   "name": "recalboxOS",
-  "version": "v3.1.0-rpi2-beta3",
-  "release_date": "2015-02-09",
+  "version": "v3.1.1",
+  "release_date": "2015-02-10",
   "kernel": "3.12",
   "description": "The recalbox operating system.",
   "url": "http://www.recalbox.com/",

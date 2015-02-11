@@ -314,18 +314,18 @@ WAARSCHUWING: Dit verwijdert alle bestaande bestanden op de SD kaart</translatio
     </message>
     <message>
         <location filename="mainwindow.cpp" line="256"/>
-        <location filename="mainwindow.cpp" line="1120"/>
+        <location filename="mainwindow.cpp" line="1119"/>
         <source>RECOMMENDED</source>
         <translation>AANBEVOLEN</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="526"/>
-        <location filename="mainwindow.cpp" line="545"/>
+        <location filename="mainwindow.cpp" line="525"/>
+        <location filename="mainwindow.cpp" line="544"/>
         <source>Confirm</source>
         <translation>Bevestigen</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="639"/>
+        <location filename="mainwindow.cpp" line="638"/>
         <source>NOOBS v%1 - Built: %2</source>
         <translation>NOOBS v%1 - Built: %2</translation>
     </message>
@@ -355,15 +355,15 @@ WAARSCHUWING: Dit verwijdert alle bestaande bestanden op de SD kaart</translatio
         <translation>SD kaart kan beschadigd zijn</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="527"/>
+        <location filename="mainwindow.cpp" line="526"/>
         <source>Warning: this will install the selected Operating System(s). All existing data on the SD card will be overwritten, including any OSes that are already installed.</source>
         <oldsource>Warning: this will install the selected Operating System. All existing data on the SD card will be overwritten.</oldsource>
         <translation>Weet u zeker dat u het besturingssysteem wilt installeren?
 Hierbij worden alle bestaande bestanden verwijderd.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="620"/>
-        <location filename="mainwindow.cpp" line="1019"/>
+        <location filename="mainwindow.cpp" line="619"/>
+        <location filename="mainwindow.cpp" line="1018"/>
         <source>Error</source>
         <translation>Fout</translation>
     </message>
@@ -373,12 +373,12 @@ Hierbij worden alle bestaande bestanden verwijderd.</translation>
         <translation>GEINSTALLEERD</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="739"/>
+        <location filename="mainwindow.cpp" line="738"/>
         <source>Display Mode Changed</source>
         <translation>Resolutie aangepast</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="671"/>
+        <location filename="mainwindow.cpp" line="670"/>
         <source>HDMI preferred mode</source>
         <translation>HDMI preferred mode</translation>
     </message>
@@ -388,99 +388,99 @@ Hierbij worden alle bestaande bestanden verwijderd.</translation>
         <translation>Even geduld</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="546"/>
+        <location filename="mainwindow.cpp" line="545"/>
         <source>Warning: incompatible Operating System(s) detected. The following OSes aren&apos;t supported on this revision of Raspberry Pi and may fail to boot or function correctly:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="586"/>
+        <location filename="mainwindow.cpp" line="585"/>
         <source>The install process will begin shortly.</source>
         <translation>Even geduld.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="610"/>
+        <location filename="mainwindow.cpp" line="609"/>
         <source>OS(es) installed</source>
         <oldsource>OS installed</oldsource>
         <translation>Besturingssysteem geinstalleerd</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="611"/>
+        <location filename="mainwindow.cpp" line="610"/>
         <source>OS(es) Installed Successfully</source>
         <oldsource>OS Installed Successfully</oldsource>
         <translation>Besturingssysteem successvol geinstalleerd</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="675"/>
+        <location filename="mainwindow.cpp" line="674"/>
         <source>HDMI safe mode</source>
         <translation>HDMI safe mode</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="679"/>
+        <location filename="mainwindow.cpp" line="678"/>
         <source>composite PAL mode</source>
         <translation>composite PAL mode</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="683"/>
+        <location filename="mainwindow.cpp" line="682"/>
         <source>composite NTSC mode</source>
         <translation>composite NTSC mode</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="740"/>
+        <location filename="mainwindow.cpp" line="739"/>
         <source>Display mode changed to %1
 Would you like to make this setting permanent?</source>
         <translation>Resolutie aangepast naar %1
 De instelling opslaan?</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1005"/>
-        <location filename="mainwindow.cpp" line="1344"/>
-        <location filename="mainwindow.cpp" line="1354"/>
+        <location filename="mainwindow.cpp" line="1004"/>
+        <location filename="mainwindow.cpp" line="1343"/>
+        <location filename="mainwindow.cpp" line="1353"/>
         <source>Download error</source>
         <translation>Fout bij downloaden</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1005"/>
+        <location filename="mainwindow.cpp" line="1004"/>
         <source>Error downloading distribution list from Internet</source>
         <translation>Fout downloaden van lijst met besturingssystemen van Internet</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1019"/>
+        <location filename="mainwindow.cpp" line="1018"/>
         <source>Error parsing list.json downloaded from server</source>
         <translation>Fout bij parsen list.json</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1235"/>
+        <location filename="mainwindow.cpp" line="1234"/>
         <source>Needed</source>
         <translation>Nodig</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1236"/>
+        <location filename="mainwindow.cpp" line="1235"/>
         <source>Available</source>
         <translation>Beschikbaar</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1344"/>
+        <location filename="mainwindow.cpp" line="1343"/>
         <source>Error downloading meta file</source>
         <translation>Fout bij downloaden meta bestand</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1354"/>
+        <location filename="mainwindow.cpp" line="1353"/>
         <source>Error writing downloaded file to SD card. SD card or file system may be damaged.</source>
         <translation>Fout bij wegschrijven gedownload bestand naar SD kaart. SD kaart of bestandssysteem kan beschadigd zijn.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1469"/>
+        <location filename="mainwindow.cpp" line="1468"/>
         <source>Wired network access is required to use NOOBS without local images. Please insert a network cable into the network port.</source>
         <translation>Een bekabelde netwerk verbinding is vereist indien er geen lokale images zijn. Controleer of de netwerk kabel aangesloten zit.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="860"/>
-        <location filename="mainwindow.cpp" line="1468"/>
+        <location filename="mainwindow.cpp" line="859"/>
+        <location filename="mainwindow.cpp" line="1467"/>
         <source>No network access</source>
         <translation>Geen netwerk verbinding</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="861"/>
+        <location filename="mainwindow.cpp" line="860"/>
         <source>Wired network access is required for this feature. Please insert a network cable into the network port.</source>
         <translation>Een bekabelde netwerk verbinding is vereist voor deze functionaliteit. Controleer of de netwerk kabel aangesloten zit.</translation>
     </message>
