@@ -14,7 +14,7 @@
       "partition_size_nominal": 2000,
       "want_maximised": false,
       "mkfs_options": "-O ^huge_file",
-      "uncompressed_tarball_size": 500
+      "uncompressed_tarball_size": 600
     },
     {
       "label": "share",
