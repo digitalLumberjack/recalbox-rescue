@@ -4,6 +4,7 @@
 #include "keydetection.h"
 #include "gpioinput.h"
 #include "rightbuttonfilter.h"
+#include "longpresshandler.h"
 #include "json.h"
 #include "util.h"
 #include "bootselectiondialog.h"
@@ -20,6 +21,7 @@
 #include <QProcess>
 #include <QDir>
 #include <QDebug>
+#include <QTime>
 
 #ifdef Q_WS_QWS
 #include <QWSServer>
@@ -36,32 +38,44 @@
 
 void reboot_to_extended(const QString &defaultPartition, bool setDisplayMode)
 {
-    // Unmount any open file systems
-    QProcess::execute("umount -r /mnt");
-    QProcess::execute("umount -r /settings");
-
-    if (QFile::exists("/dev/mmcblk0p7"))
-    {
 #ifdef Q_WS_QWS
-        QWSServer::setBackground(Qt::white);
-        QWSServer::setCursorVisible(true);
+    QWSServer::setBackground(Qt::white);
+    QWSServer::setCursorVisible(true);
 #endif
-        BootSelectionDialog bsd(defaultPartition);
-        if (setDisplayMode)
-            bsd.setDisplayMode();
-        bsd.exec();
-    }
+    BootSelectionDialog bsd(defaultPartition);
+    if (setDisplayMode)
+        bsd.setDisplayMode();
+    bsd.exec();
 
     // Shut down networking
     QProcess::execute("ifdown -a");
+    // Unmount file systems
+    QProcess::execute("umount -ar");
+    ::sync();
     // Reboot
     ::reboot(RB_AUTOBOOT);
 }
 
+bool hasInstalledOS()
+{
+    bool installedOsFileExists = false;
+
+    if (QProcess::execute("mount -o ro " SETTINGS_PARTITION " /settings") == 0)
+    {
+        installedOsFileExists = QFile::exists("/settings/installed_os.json");
+        QProcess::execute("umount /settings");
+    }
+
+    return installedOsFileExists;
+}
+
 int main(int argc, char *argv[])
 {
-    // Wait for keyboard to appear before displaying anything
-    KeyDetection::waitForKeyboard();
+    bool hasTouchScreen = QFile::exists("/sys/devices/platform/rpi_ft5406");
+
+    // Unless we have a touch screen, wait for keyboard to appear before displaying anything
+    if (!hasTouchScreen)
+        KeyDetection::waitForKeyboard();
 
     int rev = readBoardRevision();
 
@@ -76,6 +90,7 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
     RightButtonFilter rbf;
+    LongPressHandler lph;
     GpioInput gpio(gpioChannel);
 
     bool runinstaller = false;
@@ -132,9 +147,16 @@ int main(int argc, char *argv[])
     // Intercept right mouse clicks sent to the title bar
     a.installEventFilter(&rbf);
 
+    // Treat long holds as double-clicks
+    if (hasTouchScreen)
+        a.installEventFilter(&lph);
+
 #ifdef Q_WS_QWS
     QWSServer::setCursorVisible(false);
 #endif
+
+    QDir settingsdir;
+    settingsdir.mkdir("/settings");
 
     // Set wallpaper and icon, if we have resource files for that
     if (QFile::exists(":/icons/raspberry_icon.png"))
@@ -148,15 +170,34 @@ int main(int argc, char *argv[])
         QApplication::processEvents();
 
     // If -runinstaller is not specified, only continue if SHIFT is pressed, GPIO is triggered,
-    // or no OS is installed (/dev/mmcblk0p5 does not exist)
+    // or no OS is installed (/settings/installed_os.json does not exist)
     bool bailout = !runinstaller
         && !force_trigger
         && !(gpio_trigger && (gpio.value() == 0 ))
-        && !(keyboard_trigger && KeyDetection::isF10pressed())
-        && QFile::exists(FAT_PARTITION_OF_IMAGE);
+        && hasInstalledOS();
 
-    // Default to booting first extended partition
-    setRebootPartition("5");
+    if (bailout && keyboard_trigger)
+    {
+        QTime t;
+        t.start();
+
+        while (t.elapsed() < 2000)
+        {
+            QApplication::processEvents(QEventLoop::WaitForMoreEvents, 10);
+            if (QApplication::queryKeyboardModifiers().testFlag(Qt::ShiftModifier))
+            {
+                bailout = false;
+                qDebug() << "Shift detected";
+                break;
+            }
+            if (hasTouchScreen && QApplication::mouseButtons().testFlag(Qt::LeftButton))
+            {
+                bailout = false;
+                qDebug() << "Tap detected";
+                break;
+            }
+        }
+    }
 
     if (bailout)
     {

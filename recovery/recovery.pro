@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network dbus
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,7 +27,17 @@ SOURCES += main.cpp\
     multiimagewritethread.cpp \
     util.cpp \
     twoiconsdelegate.cpp \
-    bootselectiondialog.cpp
+    bootselectiondialog.cpp \
+    wifisettingsdialog.cpp \
+    wpa_supplicant/wpsinterface.cpp \
+    wpa_supplicant/wpasupplicant.cpp \
+    wpa_supplicant/wpafactory.cpp \
+    wpa_supplicant/network.cpp \
+    wpa_supplicant/interface.cpp \
+    wpa_supplicant/bss.cpp \
+    osinfo.cpp \
+    partitioninfo.cpp \
+    longpresshandler.cpp
 
 HEADERS  += mainwindow.h \
     languagedialog.h \
@@ -43,13 +53,24 @@ HEADERS  += mainwindow.h \
     multiimagewritethread.h \
     util.h \
     twoiconsdelegate.h \
-    bootselectiondialog.h
+    bootselectiondialog.h \
+    wifisettingsdialog.h \
+    wpa_supplicant/wpsinterface.h \
+    wpa_supplicant/wpasupplicant.h \
+    wpa_supplicant/wpafactory.h \
+    wpa_supplicant/network.h \
+    wpa_supplicant/interface.h \
+    wpa_supplicant/bss.h \
+    osinfo.h \
+    partitioninfo.h \
+    longpresshandler.h
 
 FORMS    += mainwindow.ui \
     languagedialog.ui \
     progressslideshowdialog.ui \
     confeditdialog.ui \
-    bootselectiondialog.ui
+    bootselectiondialog.ui \
+    wifisettingsdialog.ui
 
 RESOURCES += \
     icons.qrc
@@ -63,4 +84,5 @@ TRANSLATIONS += translation_nl.ts \
     translation_fi.ts
 
 OTHER_FILES += \
-    README.txt
+    README.txt \
+    wpa_supplicant/wpa_supplicant.xml

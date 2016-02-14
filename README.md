@@ -13,9 +13,6 @@ Compilation :
 
 Then you have to compile https://github.com/digitalLumberjack/recalbox-buildroot and copy created root.tar.xz, boot.tar.xs and share.tar.xz to recalbox-rescue/output/os/recalboxOS/
 
-Or use the createRecalboxSystem.sh script that will create the whole system for you : 
-https://github.com/digitalLumberjack/recalbox-os/releases
-
 ### Legal compliance
 
 Copyright (c) 2013, Raspberry Pi

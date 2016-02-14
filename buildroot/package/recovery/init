@@ -7,8 +7,21 @@
 /bin/mount -t proc proc /proc
 /bin/mount -o remount,rw,noatime /
 /bin/mount -t sysfs sysfs /sys
-/bin/mount -t devtmpfs dev /dev
+/bin/mount -t devtmpfs dev /dev 2>/dev/null
 /bin/hostname -F /etc/hostname
+/bin/mount -t tmpfs tmpfs /tmp
+
+# Newer kernel versions can load firmware from /lib/firmware by themselves without help
+# However that can fail during boot due to our initrd ramdisk not being mounted in time
+# Retry any pending requests
+(cd /sys/class/firmware
+for F in *; do
+    if [ -d "$F" ]; then
+        echo 1 > "$F/loading"
+        cat "/lib/firmware/${F/!//}" > "$F/data"
+        echo 0 > "$F/loading"
+    fi
+done)
 
 # Set up ACT LED to be triggered by mmc0
 echo mmc0 > /sys/class/leds/led0/trigger
@@ -19,6 +32,9 @@ echo 2 >/sys/module/vt/parameters/cur_default
 /sbin/getty -L tty3 0 vt100 &
 /sbin/getty -L ttyAMA0 115200 vt100 &
 
+# Enable syslog
+/etc/init.d/S01logging start > /dev/null
+
 if grep -q vncinstall /proc/cmdline; then
     # VNC server mode. Mainly useful for making screenshots
     export QWS_DISPLAY="VNC:size=800x600:depth=32:0"
@@ -27,6 +43,11 @@ fi
 
 # Mouse acceleration
 #export QWS_MOUSE_PROTO=:accel=1
+
+# Pi touch screen
+if [ -e /sys/devices/platform/rpi_ft5406 ]; then
+    export QWS_MOUSE_PROTO="linuxinput:/dev/input/event0:grab=1 intellimouse:/dev/input/mice"
+fi
 
 SAFE_MODE=`vcgencmd get_config safe_mode_gpio`
 
