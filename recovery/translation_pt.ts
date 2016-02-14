@@ -274,7 +274,7 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+15"/>
         <source>Wifi networks (w)</source>
         <translation type="unfinished"></translation>
     </message>

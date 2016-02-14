@@ -18,10 +18,10 @@
 #define ENABLE_LANGUAGE_CHOOSER
 
 /* Website launched when launching Arora */
-#define HOMEPAGE  "http://www.raspberrypi.org/help/"
+#define HOMEPAGE  "https://github.com/recalbox/recalbox-os/wiki"
 
 /* Location to download the list of available distributions from */
-#define DEFAULT_REPO_SERVER  "http://archive2.recalbox.com/os_list.json"
+#define DEFAULT_REPO_SERVER  "http://archive.recalbox.com/os_list.json"
 
 /* Size of recovery FAT partition in MB.
  * First partition starts at offset 1 MB (sector 2048)

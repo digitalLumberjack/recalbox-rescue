@@ -274,17 +274,17 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="198"/>
+        <location filename="mainwindow.ui" line="201"/>
         <source>Wifi networks (w)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="201"/>
+        <location filename="mainwindow.ui" line="204"/>
         <source>Select a wifi network to connect to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="204"/>
+        <location filename="mainwindow.ui" line="207"/>
         <source>W</source>
         <translation type="unfinished"></translation>
     </message>
