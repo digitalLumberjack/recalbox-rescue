@@ -15,7 +15,7 @@ mount "$part2" /tmp/2
 sed /tmp/1/cmdline.txt -i -e "s|root=/dev/[^ ]*|root=${part2}|"
 sed /tmp/2/etc/fstab -i -e "s|^.* / |${part2}  / |"
 sed /tmp/2/etc/fstab -i -e "s|^.*/boot|${part1} /boot|"
-sed /tmp/1/config.txt -i -e "s|/dev/mmcblk0p3|${part3}|"
+sed /tmp/1/recalbox-boot.conf -i -e "s|internal=.*|internal=${part3}|"
 
 umount /tmp/1
 umount /tmp/2
