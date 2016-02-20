@@ -18,10 +18,9 @@
     },
     {
       "label": "share",
-      "filesystem_type": "FAT",
+      "filesystem_type": "ext4",
       "partition_size_nominal": 1000,
-      "want_maximised": true,
-      "mkfs_options": "-F 32"
+      "want_maximised": true
     }
   ]
 }
