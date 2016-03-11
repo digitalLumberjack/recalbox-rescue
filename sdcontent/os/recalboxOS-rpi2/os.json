@@ -5,5 +5,8 @@
   "kernel": "4.1",
   "description": "The recalbox operating system.",
   "url": "http://www.recalbox.com/",
-  "supported_hex_revisions": "1040,1041"
+  "supported_hex_revisions": "1040,1041",
+  "supported_models": [
+    "Pi 2"
+   ]
 }
