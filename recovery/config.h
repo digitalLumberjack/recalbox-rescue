@@ -2,7 +2,7 @@
 #define CONFIG_H
 
 /* Version number displayed in the title bar */
-#define VERSION_NUMBER "1.4"
+#define VERSION_NUMBER "1.7"
 
 /* Color of the background */
 // #define BACKGROUND_COLOR  Qt::white
@@ -22,6 +22,9 @@
 
 /* Location to download the list of available distributions from */
 #define DEFAULT_REPO_SERVER  "http://archive.recalbox.com/os_list.json"
+/* Location to download the list of available distributions from
+ * Multiple lists can be specified by space separating the URLs */
+//#define DEFAULT_REPO_SERVER  "http://downloads.raspberrypi.org/os_list_v3.json"
 
 /* Size of recovery FAT partition in MB.
  * First partition starts at offset 1 MB (sector 2048)

@@ -31,6 +31,7 @@
 #include <QtNetwork/QNetworkReply>
 #include <QtNetwork/QNetworkDiskCache>
 #include <QtNetwork/QNetworkInterface>
+#include <QtNetwork/QNetworkConfigurationManager>
 #include <QtDBus/QDBusConnection>
 #include <QHostInfo>
 
@@ -72,7 +73,7 @@ MainWindow::MainWindow(const QString &defaultDisplay, QSplashScreen *splash, QWi
     QMainWindow(parent),
     ui(new Ui::MainWindow),
     _qpd(NULL), _kcpos(0), _defaultDisplay(defaultDisplay),
-    _silent(false), _allowSilent(false), _splash(splash), _settings(NULL),
+    _silent(false), _allowSilent(false), _showAll(false), _splash(splash), _settings(NULL),
     _hasWifi(false), _numInstalledOS(0), _netaccess(NULL), _displayModeBox(NULL)
 {
     ui->setupUi(this);
@@ -157,7 +158,13 @@ MainWindow::MainWindow(const QString &defaultDisplay, QSplashScreen *splash, QWi
     _qpd = NULL;
     QProcess::execute("mount -o ro -t vfat /dev/mmcblk0p1 /mnt");
 
-    if (getFileContents("/proc/cmdline").contains("silentinstall"))
+    _model = getFileContents("/proc/device-tree/model");
+    QString cmdline = getFileContents("/proc/cmdline");
+    if (cmdline.contains("showall"))
+    {
+        _showAll = true;
+    }
+    if (cmdline.contains("silentinstall"))
     {
         /* If silentinstall is specified, auto-install single image in /os */
         _allowSilent = true;
@@ -351,77 +358,8 @@ void MainWindow::repopulate()
         ui->actionCancel->setEnabled(true);
 }
 
-
-/* Whether this OS is supported */
-bool isSupportedOs(const QString& name, const QVariantMap& values)
-{
-    /* Can't simply pull "name" from "values" because in some JSON files it's "os_name" and in others it's "name" */
-
-    /* If it's not bootable, it isn't really an OS, so is always supported */
-    if (!canBootOs(name, values))
-    {
-        return true;
-    }
-
-    uint board_revision = readBoardRevision();
-    if (values.find("supported_revisions") != values.end())
-    {
-        /* Check the supported revisions list */
-        QStringList revisions = values.value("supported_revisions").toString().remove(" ").split(",");
-        for (int i=0; i < revisions.size(); i++)
-        {
-            bool ok;
-            uint rev = revisions.at(i).toUInt(&ok, 10);
-            if (ok)
-            {
-                if ((rev & 0xffff) == (board_revision & 0xffff))
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-    else if (values.find("supported_hex_revisions") != values.end())
-    {
-        /* Check the supported revisions list */
-        QStringList revisions = values.value("supported_hex_revisions").toString().remove(" ").split(",");
-        for (int i=0; i < revisions.size(); i++)
-        {
-            bool ok;
-            uint rev = revisions.at(i).toUInt(&ok, 16);
-            if (ok)
-            {
-                if ((rev & 0xffff) == (board_revision & 0xffff))
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-    else
-    {
-        /* Check the feature_level flag */
-        if (board_revision < 64) /* overflow otherwise */
-        {
-            quint64 featurelevel = values.value("feature_level", 58364).toULongLong();
-            quint64 mask = (quint64)1 << board_revision;
-            if ((featurelevel & mask) != mask)
-            {
-                return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-    return true;
-}
 /* Whether this OS should be displayed in the list of installable OSes */
-bool canInstallOs(const QString& name, const QVariantMap& values)
+bool MainWindow::canInstallOs(const QString &name, const QVariantMap &values)
 {
     /* Can't simply pull "name" from "values" because in some JSON files it's "os_name" and in others it's "name" */
 
@@ -440,7 +378,46 @@ bool canInstallOs(const QString& name, const QVariantMap& values)
         }
     }
 
-    return isSupportedOs(name, values);
+    /* Display OS in list if it is supported or "showall" is specified in recovery.cmdline */
+    if (_showAll)
+    {
+        return true;
+    }
+    else
+    {
+        return isSupportedOs(name, values);
+    }
+}
+
+/* Whether this OS is supported */
+bool MainWindow::isSupportedOs(const QString &name, const QVariantMap &values)
+{
+    /* Can't simply pull "name" from "values" because in some JSON files it's "os_name" and in others it's "name" */
+
+    /* If it's not bootable, it isn't really an OS, so is always supported */
+    if (!canBootOs(name, values))
+    {
+        return true;
+    }
+
+    if (values.contains("supported_models"))
+    {
+        QStringList supportedModels = values.value("supported_models").toStringList();
+
+        foreach (QString m, supportedModels)
+        {
+            /* Check if the full formal model name (e.g. "Raspberry Pi 2 Model B Rev 1.1")
+             * contains the string we are told to look for (e.g. "Pi 2") */
+            if (_model.contains(m, Qt::CaseInsensitive))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    return true;
 }
 
 QMap<QString, QVariantMap> MainWindow::listImages()
@@ -995,8 +972,10 @@ void MainWindow::onOnlineStateChanged(bool online)
             _cache->setCacheDirectory("/settings/cache");
             _cache->setMaximumCacheSize(8 * 1024 * 1024);
             _netaccess->setCache(_cache);
+            QNetworkConfigurationManager manager;
+            _netaccess->setConfiguration(manager.defaultConfiguration());
 
-            downloadList(DEFAULT_REPO_SERVER);
+            downloadLists();
         }
         ui->actionBrowser->setEnabled(true);
         emit networkUp();
@@ -1007,6 +986,17 @@ void MainWindow::downloadList(const QString &urlstring)
 {
     QNetworkReply *reply = _netaccess->get(QNetworkRequest(QUrl(urlstring)));
     connect(reply, SIGNAL(finished()), this, SLOT(downloadListRedirectCheck()));
+}
+
+void MainWindow::downloadLists()
+{
+    _numIconsToDownload = 0;
+    QStringList urls = QString(DEFAULT_REPO_SERVER).split(' ', QString::SkipEmptyParts);
+
+    foreach (QString url, urls)
+    {
+        downloadList(url);
+    }
 }
 
 void MainWindow::rebuildInstalledList()
@@ -1137,10 +1127,9 @@ void MainWindow::processJson(QVariant json)
     }
 
     /* Download icons */
-    _numIconsToDownload = iconurls.count();
-
-    if (_numIconsToDownload)
+    if (!iconurls.isEmpty())
     {
+         _numIconsToDownload += iconurls.count();
         foreach (QString iconurl, iconurls)
         {
             downloadIcon(iconurl, iconurl);
@@ -1302,8 +1291,11 @@ void MainWindow::updateNeeded()
         if (nameMatchesRiscOS(entry.value("name").toString()))
         {
             /* RiscOS needs to start at a predetermined sector, calculate the extra space needed for that */
-            int startSector = getFileContents("/sys/class/block/mmcblk0p2/start").trimmed().toULongLong();
-            _neededMB += (RISCOS_SECTOR_OFFSET - startSector)/2048;
+            int startSector = getFileContents("/sys/class/block/mmcblk0p5/start").trimmed().toULongLong()+getFileContents("/sys/class/block/mmcblk0p5/size").trimmed().toULongLong();
+            if (RISCOS_SECTOR_OFFSET > startSector)
+            {
+                _neededMB += (RISCOS_SECTOR_OFFSET - startSector)/2048;
+            }
         }
     }
 
@@ -1362,7 +1354,6 @@ void MainWindow::downloadListRedirectCheck()
     if (httpstatuscode > 300 && httpstatuscode < 400)
     {
         qDebug() << "Redirection - Re-trying download from" << redirectionurl;
-        _numMetaFilesToDownload--;
         downloadList(redirectionurl);
     }
     else
@@ -1379,7 +1370,6 @@ void MainWindow::downloadIconRedirectCheck()
     if (httpstatuscode > 300 && httpstatuscode < 400)
     {
         qDebug() << "Redirection - Re-trying download from" << redirectionurl;
-        _numMetaFilesToDownload--;
         downloadIcon(redirectionurl, originalurl);
     }
     else
@@ -1568,7 +1558,7 @@ void MainWindow::on_actionWifi_triggered()
         if (wasAlreadyOnlineBefore)
         {
             /* Try to redownload list. Could have failed through previous access point */
-            downloadList(DEFAULT_REPO_SERVER);
+            downloadLists();
         }
     }
 }

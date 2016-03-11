@@ -41,7 +41,7 @@ protected:
     QList <int> _kc;
     int _kcpos;
     const QString _defaultDisplay;
-    bool _silent, _allowSilent;
+    bool _silent, _allowSilent, _showAll;
     static bool _partInited;
     static int _currentMode;
     QSplashScreen *_splash;
@@ -53,6 +53,7 @@ protected:
     QMessageBox *_displayModeBox;
     QTimer _networkStatusPollTimer;
     QTime _time;
+    QString _model;
 
     QMap<QString,QVariantMap> listImages();
     virtual void changeEvent(QEvent * event);
@@ -71,7 +72,10 @@ protected:
     void downloadMetaFile(const QString &url, const QString &saveAs);
     void downloadIcon(const QString &urlstring, const QString &originalurl);
     void downloadList(const QString &urlstring);
+    void downloadLists();
     void startImageWrite();
+    bool canInstallOs(const QString &name, const QVariantMap &values);
+    bool isSupportedOs(const QString &name, const QVariantMap &values);
 
 protected slots:
     void populate();
