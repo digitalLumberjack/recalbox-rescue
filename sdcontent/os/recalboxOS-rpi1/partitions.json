@@ -19,8 +19,8 @@
     {
       "label": "share",
       "filesystem_type": "ext4",
-      "partition_size_nominal": 1000,
-      "want_maximised": true
+      "want_maximised": true,
+      "empty_fs": true
     }
   ]
 }
