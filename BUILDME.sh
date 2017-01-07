@@ -122,7 +122,7 @@ for i in $*; do
 
     # Update raspberrypi/linux rpi-4.1.y HEAD version in buildroot/.config to latest
     if [ $i = "update-kernel" ]; then
-        update_github_kernel_version raspberrypi/linux rpi-4.1.y
+        update_github_kernel_version raspberrypi/linux rpi-4.4.y
     fi
 
     # Option to build just recovery without completely rebuilding both kernels
@@ -150,13 +150,13 @@ if [ $SKIP_KERNEL_REBUILD -ne 1 ]; then
     select_kernelconfig armv7
     make linux-reconfigure
     # copy ARMv7 kernel
-    package/rpi-firmware/mkknlimg "$IMAGES_DIR/zImage" "$FINAL_OUTPUT_DIR/recovery7.img"
+    cp "$IMAGES_DIR/zImage" "$FINAL_OUTPUT_DIR/recovery7.img"
 
     # Rebuild kernel for ARMv6
     select_kernelconfig armv6
     make linux-reconfigure
     # copy ARMv6 kernel
-    package/rpi-firmware/mkknlimg "$IMAGES_DIR/zImage" "$FINAL_OUTPUT_DIR/recovery.img"
+    cp "$IMAGES_DIR/zImage" "$FINAL_OUTPUT_DIR/recovery.img"
 else
     echo "Warning: kernels in '$NOOBS_OUTPUT_DIR' directory haven't been updated"
 fi
