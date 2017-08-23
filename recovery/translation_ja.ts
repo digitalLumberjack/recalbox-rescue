@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ja" sourcelanguage="en">
+<TS version="2.0" language="ja" sourcelanguage="en">
 <context>
     <name>BootSelectionDialog</name>
     <message>
         <location filename="bootselectiondialog.ui" line="19"/>
-        <location filename="bootselectiondialog.cpp" line="249"/>
+        <location filename="bootselectiondialog.cpp" line="258"/>
         <source>Select OS to boot</source>
-        <translation type="unfinished"></translation>
+        <translation>ブートするOSの選択</translation>
     </message>
     <message>
-        <location filename="bootselectiondialog.cpp" line="44"/>
+        <location filename="bootselectiondialog.cpp" line="45"/>
         <source>Cannot display boot menu</source>
-        <translation type="unfinished"></translation>
+        <translation>ブートメニューを表示できません</translation>
     </message>
     <message>
-        <location filename="bootselectiondialog.cpp" line="44"/>
+        <location filename="bootselectiondialog.cpp" line="45"/>
         <source>Error mounting settings partition</source>
-        <translation type="unfinished"></translation>
+        <translation>設定パーティションをマウント中のエラー</translation>
     </message>
     <message>
-        <location filename="bootselectiondialog.cpp" line="190"/>
+        <location filename="bootselectiondialog.cpp" line="199"/>
         <source>HDMI safe mode</source>
-        <translation type="unfinished"></translation>
+        <translation>HDMI セーフモード</translation>
     </message>
     <message>
-        <location filename="bootselectiondialog.cpp" line="194"/>
+        <location filename="bootselectiondialog.cpp" line="203"/>
         <source>composite PAL mode</source>
-        <translation type="unfinished"></translation>
+        <translation>コンポジット PALモード</translation>
     </message>
     <message>
-        <location filename="bootselectiondialog.cpp" line="198"/>
+        <location filename="bootselectiondialog.cpp" line="207"/>
         <source>composite NTSC mode</source>
-        <translation type="unfinished"></translation>
+        <translation>コンポジット NTSCモード</translation>
     </message>
     <message>
-        <location filename="bootselectiondialog.cpp" line="254"/>
+        <location filename="bootselectiondialog.cpp" line="263"/>
         <source>Previously selected OS will boot in %1 seconds</source>
-        <translation type="unfinished"></translation>
+        <translation>選択されたOSは %1 秒以内にブートします</translation>
     </message>
 </context>
 <context>
@@ -45,150 +45,194 @@
     <message>
         <location filename="confeditdialog.ui" line="22"/>
         <source>Config editor</source>
-        <translation type="unfinished"></translation>
+        <translation>設定エディター</translation>
     </message>
     <message>
         <location filename="confeditdialog.cpp" line="82"/>
         <source>Error</source>
-        <translation type="unfinished">エラー</translation>
+        <translation>エラー</translation>
     </message>
     <message>
         <location filename="confeditdialog.cpp" line="83"/>
         <source>Error mounting boot partition</source>
-        <translation type="unfinished"></translation>
+        <translation>ブートパーティションのマウントエラー</translation>
     </message>
 </context>
 <context>
     <name>InitDriveThread</name>
     <message>
-        <location filename="initdrivethread.cpp" line="38"/>
-        <location filename="initdrivethread.cpp" line="52"/>
+        <location filename="initdrivethread.cpp" line="39"/>
+        <location filename="initdrivethread.cpp" line="70"/>
         <source>Mounting FAT partition</source>
         <translation>FATパーティションをマウントしています</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="45"/>
+        <location filename="initdrivethread.cpp" line="63"/>
         <source>Formatting settings partition</source>
-        <translation type="unfinished"></translation>
+        <translation>設定パーティションをフォーマットしています</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="48"/>
+        <location filename="initdrivethread.cpp" line="66"/>
         <source>Error formatting settings partition</source>
-        <translation type="unfinished"></translation>
+        <translation>設定パーティションのフォーマットエラー</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="131"/>
+        <location filename="initdrivethread.cpp" line="149"/>
+        <location filename="initdrivethread.cpp" line="350"/>
         <source>Error unmounting system partition.</source>
-        <translation>システムパーティションのマウント解除エラー.</translation>
+        <translation>システムパーティションのアンマウントエラー.</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="148"/>
+        <location filename="initdrivethread.cpp" line="166"/>
+        <location filename="initdrivethread.cpp" line="354"/>
         <source>Zeroing partition table</source>
         <translation>パーティションテーブルのクリア中</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="151"/>
+        <location filename="initdrivethread.cpp" line="169"/>
+        <location filename="initdrivethread.cpp" line="357"/>
         <source>Error zero&apos;ing MBR/GPT. SD card may be broken or advertising wrong capacity.</source>
-        <translation>MBR/GPTクリア時のエラー。 SDカードは壊れているか、間違った容量を報告しています。</translation>
+        <translation>MBR/GPTクリア時のエラー.SDカードは壊れているか,間違った容量を報告しています.</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="142"/>
+        <location filename="initdrivethread.cpp" line="160"/>
         <source>Would you like NOOBS to create one for you?
 WARNING: This will erase all data on your SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>NOOBSでMBRを作成しますか？
+警告：この操作を行うとSDカードのデータはすべて消去されます。</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="143"/>
+        <location filename="initdrivethread.cpp" line="161"/>
         <source>Error: No MBR present on SD Card</source>
-        <translation type="unfinished"></translation>
+        <translation>エラー：MBRがSDカードにありません</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="156"/>
+        <location filename="initdrivethread.cpp" line="174"/>
         <source>Writing new MBR</source>
-        <translation type="unfinished"></translation>
+        <translation>新しいMBRを書き込み中</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="164"/>
+        <location filename="initdrivethread.cpp" line="182"/>
         <source>Error creating MBR</source>
-        <translation type="unfinished"></translation>
+        <translation>MBR作成エラー</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="172"/>
+        <location filename="initdrivethread.cpp" line="190"/>
         <source>SD card has now been formatted ready for NOOBS installation. Please re-copy the NOOBS files onto the card and reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>SDカードは,NOOBSインストールのためのフォーマットが終わりました.もう一度NOOBSのファイルをSDカードにコピーして再起動してください.</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="177"/>
+        <location filename="initdrivethread.cpp" line="195"/>
         <source>SD card has not been formatted correctly. Please reformat using the SD Association Formatting Tool and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>SDカードは正しくフォーマットされていません.SDアソシエーションのフォーマットツールで再フォーマットを試してください.</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="183"/>
+        <location filename="initdrivethread.cpp" line="201"/>
         <source>Removing partitions 2,3,4</source>
-        <translation type="unfinished"></translation>
+        <translation>パーティション2,3,4を削除中</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="197"/>
+        <location filename="initdrivethread.cpp" line="215"/>
         <source>Resizing FAT partition</source>
-        <translation type="unfinished"></translation>
+        <translation>FATパーティションのサイズを変更中</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="221"/>
+        <location filename="initdrivethread.cpp" line="239"/>
         <source>Error resizing existing FAT partition</source>
-        <translation type="unfinished"></translation>
+        <translation>FATパーティションのサイズ変更エラー</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="227"/>
+        <location filename="initdrivethread.cpp" line="245"/>
         <source>Creating extended partition</source>
-        <translation type="unfinished"></translation>
+        <translation>拡張パーティションを作成中</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="258"/>
+        <location filename="initdrivethread.cpp" line="276"/>
         <source>Error creating extended partition</source>
+        <translation>拡張パーティションを作成中のエラー</translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="342"/>
+        <source>Saving boot files to memory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="55"/>
+        <location filename="initdrivethread.cpp" line="345"/>
+        <source>Error saving boot files to memory. SD card may be damaged.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="361"/>
+        <source>Creating partitions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="365"/>
+        <source>Error partitioning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="369"/>
+        <source>Formatting boot partition (fat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="372"/>
+        <source>Error formatting boot partition (fat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="376"/>
+        <source>Copying boot files to storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="452"/>
+        <source>Setting disk volume ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="initdrivethread.cpp" line="73"/>
         <source>Error mounting system partition.</source>
-        <translation type="unfinished"></translation>
+        <translation>システムパーティションのマウントエラー</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="60"/>
+        <location filename="initdrivethread.cpp" line="78"/>
         <source>Editing cmdline.txt</source>
         <translation>cmdline.txt を編集しています</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="70"/>
+        <location filename="initdrivethread.cpp" line="88"/>
         <source>Error opening %1</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 のオープンエラー</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="83"/>
+        <location filename="initdrivethread.cpp" line="101"/>
         <source>Writing RiscOS blob</source>
-        <translation type="unfinished"></translation>
+        <translation>RiscOSのblobを書き込み中</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="86"/>
+        <location filename="initdrivethread.cpp" line="104"/>
         <source>Error writing RiscOS blob</source>
-        <translation type="unfinished"></translation>
+        <translation>RiscOSのblobの書き込みエラー</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="93"/>
+        <location filename="initdrivethread.cpp" line="111"/>
         <source>Unmounting boot partition</source>
-        <translation>ブートパーティションをマウント解除しています</translation>
+        <translation>ブートパーティションをアンマウントしています</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="96"/>
+        <location filename="initdrivethread.cpp" line="114"/>
         <source>Finish writing to disk (sync)</source>
         <translation>ディスクへの書き込みが完了しました（同期）</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="106"/>
+        <location filename="initdrivethread.cpp" line="124"/>
         <source>Mounting boot partition again</source>
         <translation>ブートパーティションを再びマウントしています</translation>
     </message>
     <message>
-        <location filename="initdrivethread.cpp" line="117"/>
+        <location filename="initdrivethread.cpp" line="135"/>
         <source>SD card broken (writes do not persist)</source>
         <translation>SDカードが壊れています（書込みが保持されません）</translation>
     </message>
@@ -203,468 +247,500 @@ WARNING: This will erase all data on your SD card</source>
     <message>
         <location filename="languagedialog.ui" line="156"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>キーボード</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.ui" line="47"/>
-        <source>Disk space</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="mainwindow.ui" line="53"/>
+        <source>Disk space</source>
+        <translation>ディスクスペース</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="65"/>
+        <source>Destination drive:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.ui" line="88"/>
         <source>Needed:</source>
-        <translation type="unfinished"></translation>
+        <translation>必要な容量</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="60"/>
+        <location filename="mainwindow.ui" line="95"/>
         <source>Available:</source>
-        <translation type="unfinished"></translation>
+        <translation>使用可能な容量</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="123"/>
+        <location filename="mainwindow.ui" line="158"/>
         <source>Install (i)</source>
-        <translation type="unfinished"></translation>
+        <translation>インストール (i)</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="126"/>
+        <location filename="mainwindow.ui" line="161"/>
         <source>Installs the selected operating system image onto this SD card.</source>
-        <translation type="unfinished"></translation>
+        <translation>選択されたオペレーティングシステムのイメージをSDカードにインストールします.</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="129"/>
+        <location filename="mainwindow.ui" line="164"/>
         <source>I</source>
-        <translation type="unfinished"></translation>
+        <translation>I</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="138"/>
+        <location filename="mainwindow.ui" line="173"/>
         <source>Exit (Esc)</source>
         <translation>終了(Esc)</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="141"/>
+        <location filename="mainwindow.ui" line="176"/>
         <source>Exits and boots the installed operating system.</source>
-        <translation type="unfinished"></translation>
+        <translation>NOOBSを終了して,インストールしたオペレーティングシステムを起動します.</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="156"/>
+        <location filename="mainwindow.ui" line="191"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>上級者向け</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="168"/>
+        <location filename="mainwindow.ui" line="203"/>
         <source>Edit config (e)</source>
-        <translation type="unfinished"></translation>
+        <translation>設定の編集 (e)</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="171"/>
+        <location filename="mainwindow.ui" line="206"/>
         <source>Opens the config.txt and cmdline.txt for the installed OS in a text editor.</source>
-        <translation type="unfinished"></translation>
+        <translation>インストール済みOSのconfig.txtとcmdline.txtをテキストエディタで開きます.</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="183"/>
+        <location filename="mainwindow.ui" line="218"/>
         <source>Online help (h)</source>
-        <translation type="unfinished"></translation>
+        <translation>オンラインヘルプ (h)</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="186"/>
+        <location filename="mainwindow.ui" line="221"/>
         <source>Opens a web browser displaying the Raspberry Pi Forum.</source>
-        <translation type="unfinished"></translation>
+        <translation>ブラウザを開いてRaspberry Pi フォーラムを表示します.</translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="201"/>
+        <location filename="mainwindow.ui" line="236"/>
         <source>Wifi networks (w)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="204"/>
+        <location filename="mainwindow.ui" line="239"/>
         <source>Select a wifi network to connect to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="207"/>
+        <location filename="mainwindow.ui" line="242"/>
         <source>W</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="275"/>
-        <location filename="mainwindow.cpp" line="1195"/>
+        <location filename="mainwindow.cpp" line="338"/>
+        <location filename="mainwindow.cpp" line="1258"/>
+        <location filename="mainwindow.cpp" line="1818"/>
         <source>RECOMMENDED</source>
-        <translation type="unfinished"></translation>
+        <translation>推奨</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="545"/>
-        <location filename="mainwindow.cpp" line="564"/>
+        <location filename="mainwindow.cpp" line="590"/>
+        <location filename="mainwindow.cpp" line="609"/>
         <source>Confirm</source>
         <translation>確認</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="656"/>
+        <location filename="mainwindow.cpp" line="703"/>
         <source>NOOBS v%1 - Built: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>NOOBS v%1 - Built: %2</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="97"/>
+        <location filename="mainwindow.cpp" line="98"/>
         <source>Setting up SD card</source>
-        <translation type="unfinished">SDカードのセットアップ</translation>
+        <translation>SDカードをセットアップ中</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="141"/>
+        <location filename="mainwindow.cpp" line="143"/>
         <source>Error mounting settings partition</source>
-        <translation type="unfinished"></translation>
+        <translation>設定パーティションのマウントエラー</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="142"/>
+        <location filename="mainwindow.cpp" line="144"/>
         <source>Persistent settings partition seems corrupt. Reformat?</source>
-        <translation type="unfinished"></translation>
+        <translation>設定パーティションは壊れているようです.再フォーマットしますか？</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="149"/>
+        <location filename="mainwindow.cpp" line="151"/>
         <source>Reformat failed</source>
-        <translation type="unfinished"></translation>
+        <translation>再フォーマット失敗</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="149"/>
+        <location filename="mainwindow.cpp" line="151"/>
         <source>SD card might be damaged</source>
-        <translation type="unfinished"></translation>
+        <translation>SDカードが壊れているかもしれません</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="546"/>
+        <location filename="mainwindow.cpp" line="585"/>
         <source>Warning: this will install the selected Operating System(s). All existing data on the SD card will be overwritten, including any OSes that are already installed.</source>
         <oldsource>Warning: this will install the selected Operating System. All existing data on the SD card will be overwritten.</oldsource>
-        <translation type="unfinished">本当にイメージを書き込んでもよいですか?この操作で既存のすべてのデータは削除されます!</translation>
+        <translation>警告：この操作で選択したOSがインストールされます.すでにインストール済みのOSを含め,SDカードの既存のデータは上書きされます.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="639"/>
-        <location filename="mainwindow.cpp" line="1094"/>
+        <location filename="mainwindow.cpp" line="686"/>
+        <location filename="mainwindow.cpp" line="1156"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="278"/>
+        <location filename="mainwindow.cpp" line="341"/>
         <source>INSTALLED</source>
-        <translation type="unfinished"></translation>
+        <translation>インストール済み</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="756"/>
+        <location filename="mainwindow.cpp" line="803"/>
         <source>Display Mode Changed</source>
-        <translation type="unfinished"></translation>
+        <translation>表示モード</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="688"/>
+        <location filename="mainwindow.cpp" line="735"/>
         <source>HDMI preferred mode</source>
-        <translation type="unfinished"></translation>
+        <translation>HDMI 通常モード</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="117"/>
+        <location filename="mainwindow.cpp" line="119"/>
         <source>Waiting for SD card (settings partition)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="130"/>
+        <location filename="mainwindow.cpp" line="132"/>
         <source>Mounting settings partition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="187"/>
+        <location filename="mainwindow.cpp" line="250"/>
         <source>Please wait while NOOBS initialises</source>
+        <translation>NOOBSの初期化が完了するまでお待ちください</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="587"/>
+        <source>SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="565"/>
+        <location filename="mainwindow.cpp" line="587"/>
+        <source>drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="610"/>
         <source>Warning: incompatible Operating System(s) detected. The following OSes aren&apos;t supported on this revision of Raspberry Pi and may fail to boot or function correctly:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="605"/>
+        <location filename="mainwindow.cpp" line="652"/>
         <source>The install process will begin shortly.</source>
-        <translation type="unfinished"></translation>
+        <translation>インストールはすぐに始まります.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="627"/>
+        <location filename="mainwindow.cpp" line="674"/>
         <source>OS(es) installed</source>
         <oldsource>OS installed</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>OSがインストールされました</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="628"/>
+        <location filename="mainwindow.cpp" line="675"/>
         <source>OS(es) Installed Successfully</source>
         <oldsource>OS Installed Successfully</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>OSのインストールに成功しました</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="692"/>
+        <location filename="mainwindow.cpp" line="739"/>
         <source>HDMI safe mode</source>
-        <translation type="unfinished"></translation>
+        <translation>HDMI セーフモード</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="696"/>
+        <location filename="mainwindow.cpp" line="743"/>
         <source>composite PAL mode</source>
-        <translation type="unfinished"></translation>
+        <translation>コンポジット PALモード</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="700"/>
+        <location filename="mainwindow.cpp" line="747"/>
         <source>composite NTSC mode</source>
-        <translation type="unfinished"></translation>
+        <translation>コンポジット NTSCモード</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="757"/>
+        <location filename="mainwindow.cpp" line="804"/>
         <source>Display mode changed to %1
 Would you like to make this setting permanent?</source>
-        <translation type="unfinished"></translation>
+        <translation>表示モードを %1 に変更しました.
+この設定を保持しますか？</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1080"/>
-        <location filename="mainwindow.cpp" line="1419"/>
-        <location filename="mainwindow.cpp" line="1429"/>
+        <location filename="mainwindow.cpp" line="1142"/>
+        <location filename="mainwindow.cpp" line="1483"/>
+        <location filename="mainwindow.cpp" line="1493"/>
         <source>Download error</source>
-        <translation type="unfinished"></translation>
+        <translation>ダウンロードエラー</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1080"/>
+        <location filename="mainwindow.cpp" line="1142"/>
         <source>Error downloading distribution list from Internet</source>
-        <translation type="unfinished"></translation>
+        <translation>ディストリビューションのリストのダウンロードエラー</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1094"/>
+        <location filename="mainwindow.cpp" line="1156"/>
         <source>Error parsing list.json downloaded from server</source>
-        <translation type="unfinished"></translation>
+        <translation>サーバーからダウンロードしたlist.jsonの読み込みエラー</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1310"/>
+        <location filename="mainwindow.cpp" line="1376"/>
         <source>Needed</source>
-        <translation type="unfinished"></translation>
+        <translation>必要な容量</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1311"/>
+        <location filename="mainwindow.cpp" line="1377"/>
         <source>Available</source>
-        <translation type="unfinished"></translation>
+        <translation>使用可能な容量</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1419"/>
+        <location filename="mainwindow.cpp" line="1483"/>
         <source>Error downloading meta file</source>
-        <translation type="unfinished"></translation>
+        <translation>メタファイルのダウンロードエラー</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1429"/>
+        <location filename="mainwindow.cpp" line="1493"/>
         <source>Error writing downloaded file to SD card. SD card or file system may be damaged.</source>
-        <translation type="unfinished"></translation>
+        <translation>ダウンロードしたファイルのSDカード書き込みエラー.SDカードかファイルシステムが壊れているかもしれません.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1545"/>
+        <location filename="mainwindow.cpp" line="1609"/>
         <source>Network access is required to use NOOBS without local images. Please select your wifi network in the next screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="1553"/>
+        <location filename="mainwindow.cpp" line="1617"/>
         <source>Wired network access is required to use NOOBS without local images. Please insert a network cable into the network port.</source>
+        <translation>ローカルイメージ以外でNOOBSを利用するには有線ネットワークが必要です.ネットワークケーブルを接続してください.</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="1731"/>
+        <source>Reformat drive?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="876"/>
-        <location filename="mainwindow.cpp" line="1544"/>
-        <location filename="mainwindow.cpp" line="1552"/>
+        <location filename="mainwindow.cpp" line="1732"/>
+        <source>Are you sure you want to reformat the drive &apos;%1&apos; for use with NOOBS? All existing data on the drive will be deleted!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="922"/>
+        <location filename="mainwindow.cpp" line="1608"/>
+        <location filename="mainwindow.cpp" line="1616"/>
         <source>No network access</source>
-        <translation type="unfinished"></translation>
+        <translation>ネットワークが接続されていません</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="877"/>
+        <location filename="mainwindow.cpp" line="923"/>
         <source>Wired network access is required for this feature. Please insert a network cable into the network port.</source>
-        <translation type="unfinished"></translation>
+        <translation>この機能には有線ネットワークが必要です.ネットワークケーブルを接続してください.</translation>
     </message>
 </context>
 <context>
     <name>MultiImageWriteThread</name>
     <message>
-        <location filename="multiimagewritethread.cpp" line="52"/>
+        <location filename="multiimagewritethread.cpp" line="55"/>
         <source>partitions.json invalid</source>
-        <translation type="unfinished"></translation>
+        <translation>不正な partitions.json です</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="76"/>
+        <location filename="multiimagewritethread.cpp" line="79"/>
         <source>RISCOS cannot be installed. Size of recovery partition too large.</source>
+        <translation>RIOSOSをインストール出来ません.リカバリーパーティションのサイズが大きすぎます.</translation>
+    </message>
+    <message>
+        <location filename="multiimagewritethread.cpp" line="111"/>
+        <source>Operating system cannot require a system partition (1,5)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="135"/>
+        <location filename="multiimagewritethread.cpp" line="116"/>
+        <source>Operating system cannot claim both primary partitions 2 and 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="multiimagewritethread.cpp" line="144"/>
         <source>Not enough disk space. Need %1 MB, got %2 MB</source>
-        <translation type="unfinished"></translation>
+        <translation>ディスクスペースが足りません. %1 MB必要ですが, %2 MBしかありません.</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="255"/>
+        <location filename="multiimagewritethread.cpp" line="311"/>
         <source>Finish writing (sync)</source>
-        <translation type="unfinished">書き込み完了(同期)</translation>
+        <translation>書き込み完了(同期)</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="384"/>
+        <location filename="multiimagewritethread.cpp" line="448"/>
         <source>File &apos;%1&apos; does not exist</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル &apos;%1&apos; がありません.</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="407"/>
-        <location filename="multiimagewritethread.cpp" line="413"/>
+        <location filename="multiimagewritethread.cpp" line="471"/>
+        <location filename="multiimagewritethread.cpp" line="477"/>
         <source>%1: Writing OS image</source>
         <oldsource>Writing image</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: イメージを書き込み中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="427"/>
+        <location filename="multiimagewritethread.cpp" line="491"/>
         <source>%1: Mounting file system</source>
         <oldsource>Mounting file system</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: ファイルシステムをマウント中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="435"/>
-        <location filename="multiimagewritethread.cpp" line="459"/>
+        <location filename="multiimagewritethread.cpp" line="499"/>
+        <location filename="multiimagewritethread.cpp" line="523"/>
         <source>%1: Error mounting file system</source>
         <oldsource>Error mounting file system</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: ファイルシステムのマウント中にエラーが発生しました</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="420"/>
+        <location filename="multiimagewritethread.cpp" line="484"/>
         <source>%1: Creating filesystem (%2)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ファイルシステムを作成中 (%2)</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="65"/>
+        <location filename="multiimagewritethread.cpp" line="68"/>
         <source>RISCOS cannot be installed. RISCOS offset value mismatch.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="71"/>
+        <location filename="multiimagewritethread.cpp" line="74"/>
         <source>RISCOS cannot be installed. RISCOS offset value missing.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="103"/>
+        <location filename="multiimagewritethread.cpp" line="106"/>
         <source>More than one operating system requires partition number %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="108"/>
-        <source>Operating system cannot require a system partition (1,2,5)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="multiimagewritethread.cpp" line="175"/>
+        <location filename="multiimagewritethread.cpp" line="213"/>
         <source>Fixed partition offset too low</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="236"/>
+        <location filename="multiimagewritethread.cpp" line="274"/>
         <source>Writing partition table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="241"/>
+        <location filename="multiimagewritethread.cpp" line="281"/>
+        <source>Writing boot partition table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="multiimagewritethread.cpp" line="297"/>
         <source>Zero&apos;ing start of each partition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="275"/>
+        <location filename="multiimagewritethread.cpp" line="331"/>
         <source>Error reading existing partition table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="352"/>
+        <location filename="multiimagewritethread.cpp" line="416"/>
         <source>Error creating partition table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="440"/>
+        <location filename="multiimagewritethread.cpp" line="504"/>
         <source>%1: Downloading and extracting filesystem</source>
-        <translation type="unfinished"></translation>
+        <translation>%1: ファイルシステムをダウンロード・展開中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="442"/>
+        <location filename="multiimagewritethread.cpp" line="506"/>
         <source>%1: Extracting filesystem</source>
         <oldsource>%1 Extracting filesystem</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: ファイルシステムを展開中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="456"/>
+        <location filename="multiimagewritethread.cpp" line="520"/>
         <source>%1: Mounting FAT partition</source>
         <oldsource>Mouning FAT partition</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: FATパーティションをマウント中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="463"/>
+        <location filename="multiimagewritethread.cpp" line="532"/>
         <source>%1: Creating os_config.json</source>
         <oldsource>Creating os_config.json</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: os_config.json を作成中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="488"/>
+        <location filename="multiimagewritethread.cpp" line="557"/>
         <source>%1: Saving display mode to config.txt</source>
         <oldsource>Saving display mode to config.txt</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: config.txt にディスプレイモードを保存中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="499"/>
+        <location filename="multiimagewritethread.cpp" line="568"/>
         <source>%1: Running partition setup script</source>
         <oldsource>Running partition setup script</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: パーティションのセットアップスクリプトを実行中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="544"/>
+        <location filename="multiimagewritethread.cpp" line="617"/>
         <source>%1: Error executing partition setup script</source>
         <oldsource>Error executing partition setup script</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: パーティションのセットアップスクリプトを実行中にエラーが発生しました</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="552"/>
-        <source>%1: Patching BCD file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="multiimagewritethread.cpp" line="556"/>
+        <location filename="multiimagewritethread.cpp" line="622"/>
         <source>%1: Unmounting FAT partition</source>
-        <oldsource>Unmounting FAT partition</oldsource>
-        <translation type="unfinished"></translation>
+        <oldsource>%1: Patching BCD file</oldsource>
+        <translation>%1: FATパーティションをアンマウント中</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="559"/>
+        <location filename="multiimagewritethread.cpp" line="625"/>
         <source>%1: Error unmounting</source>
         <oldsource>Error unmounting</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>%1: アンマウント中にエラーが発生しました</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="626"/>
+        <location filename="multiimagewritethread.cpp" line="706"/>
         <source>Error creating file system</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルシステム作成中のエラー</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="668"/>
-        <location filename="multiimagewritethread.cpp" line="730"/>
-        <location filename="multiimagewritethread.cpp" line="789"/>
+        <location filename="multiimagewritethread.cpp" line="748"/>
+        <location filename="multiimagewritethread.cpp" line="819"/>
+        <location filename="multiimagewritethread.cpp" line="878"/>
         <source>Unknown compression format file extension. Expecting .lzo, .gz, .xz, .bz2 or .zip</source>
-        <translation type="unfinished"></translation>
+        <translation>不明な圧縮ファイルフォーマット形式です.対応する形式は .lzo, .gz, .xz, .bz2, .zip のいずれかです</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="692"/>
+        <location filename="multiimagewritethread.cpp" line="781"/>
         <source>Error downloading or extracting tarball</source>
-        <translation type="unfinished"></translation>
+        <translation>tarballのダウンロード中もしくは展開中のエラー</translation>
     </message>
     <message>
-        <location filename="multiimagewritethread.cpp" line="751"/>
-        <location filename="multiimagewritethread.cpp" line="810"/>
+        <location filename="multiimagewritethread.cpp" line="840"/>
+        <location filename="multiimagewritethread.cpp" line="899"/>
         <source>Error downloading or writing OS to SD card</source>
-        <translation type="unfinished"></translation>
+        <translation>SDカードにOSをダウンロード中もしくは書き込み中のエラー</translation>
     </message>
 </context>
 <context>
     <name>ProgressSlideshowDialog</name>
     <message>
-        <location filename="progressslideshowdialog.cpp" line="138"/>
+        <location filename="progressslideshowdialog.cpp" line="140"/>
         <source>%1 MB of %2 MB written (%3 MB/sec)</source>
-        <translation type="unfinished"></translation>
+        <translation>%2 MB 中 %1 MB 書き込み済み (%3 MB/秒)</translation>
     </message>
     <message>
-        <location filename="progressslideshowdialog.cpp" line="143"/>
+        <location filename="progressslideshowdialog.cpp" line="145"/>
         <source>%1 MB written (%2 MB/sec)</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 MB 書き込み済み (%2 MB/秒)</translation>
     </message>
 </context>
 <context>
@@ -718,6 +794,11 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="wifisettingsdialog.cpp" line="44"/>
+        <source>No wifi interfaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="wifisettingsdialog.cpp" line="227"/>
         <source>Authenticated but still waiting for DHCP lease</source>
         <translation type="unfinished"></translation>
@@ -735,7 +816,7 @@ Would you like to make this setting permanent?</source>
     <message>
         <location filename="wifisettingsdialog.cpp" line="269"/>
         <source>Cancel</source>
-        <translation type="unfinished">キャンセル</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="wifisettingsdialog.cpp" line="275"/>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt" sourcelanguage="en">
+<TS version="2.0" language="pt" sourcelanguage="en">
 <context>
     <name>BootSelectionDialog</name>
     <message>
         <location filename="bootselectiondialog.ui" line="+19"/>
-        <location filename="bootselectiondialog.cpp" line="+249"/>
+        <location filename="bootselectiondialog.cpp" line="+258"/>
         <source>Select OS to boot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="bootselectiondialog.cpp" line="-205"/>
+        <location filename="bootselectiondialog.cpp" line="-213"/>
         <source>Cannot display boot menu</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20,7 +20,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+146"/>
+        <location line="+154"/>
         <source>HDMI safe mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61,8 +61,8 @@
 <context>
     <name>InitDriveThread</name>
     <message>
-        <location filename="initdrivethread.cpp" line="+38"/>
-        <location line="+14"/>
+        <location filename="initdrivethread.cpp" line="+39"/>
+        <location line="+31"/>
         <source>Mounting FAT partition</source>
         <translation>Montando a partição FAT</translation>
     </message>
@@ -78,21 +78,24 @@
     </message>
     <message>
         <location line="+83"/>
+        <location line="+201"/>
         <source>Error unmounting system partition.</source>
         <translation>Erro desmontando a partição do sistema.</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-184"/>
+        <location line="+188"/>
         <source>Zeroing partition table</source>
         <translation>Zerando tabela de partição</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-185"/>
+        <location line="+188"/>
         <source>Error zero&apos;ing MBR/GPT. SD card may be broken or advertising wrong capacity.</source>
         <translation>Erro zerando MBR/GPT. Cartão SD pode estar defeituoso ou relatando a capacidade incorretamente.</translation>
     </message>
     <message>
-        <location line="-9"/>
+        <location line="-197"/>
         <source>Would you like NOOBS to create one for you?
 WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
@@ -148,7 +151,47 @@ WARNING: This will erase all data on your SD card</source>
         <translation>Erro ao criar partição extendida</translation>
     </message>
     <message>
-        <location line="-203"/>
+        <location line="+66"/>
+        <source>Saving boot files to memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Error saving boot files to memory. SD card may be damaged.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Creating partitions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Error partitioning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Formatting boot partition (fat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Error formatting boot partition (fat)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Copying boot files to storage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Setting disk volume ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-379"/>
         <source>Error mounting system partition.</source>
         <translation>Erro ao montar partição de sistema.</translation>
     </message>
@@ -209,12 +252,17 @@ WARNING: This will erase all data on your SD card</source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.ui" line="+47"/>
+        <location filename="mainwindow.ui" line="+53"/>
         <source>Disk space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+12"/>
+        <source>Destination drive:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Needed:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -289,29 +337,30 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="+275"/>
+        <location filename="mainwindow.cpp" line="+338"/>
         <location line="+920"/>
+        <location line="+560"/>
         <source>RECOMMENDED</source>
         <translation>RECOMENDADO</translation>
     </message>
     <message>
-        <location line="-650"/>
+        <location line="-1228"/>
         <location line="+19"/>
         <source>Confirm</source>
         <translation>Confirmar</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+94"/>
         <source>NOOBS v%1 - Built: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-559"/>
+        <location line="-605"/>
         <source>Setting up SD card</source>
         <translation>Configurando cartão SD</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+45"/>
         <source>Error mounting settings partition</source>
         <translation type="unfinished"></translation>
     </message>
@@ -331,24 +380,24 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+397"/>
+        <location line="+434"/>
         <source>Warning: this will install the selected Operating System(s). All existing data on the SD card will be overwritten, including any OSes that are already installed.</source>
         <oldsource>Warning: this will install the selected Operating System. All existing data on the SD card will be overwritten.</oldsource>
-        <translation type="unfinished">Você tem certeza que deseja gravar a imagem? ISSO EXCLUIRÁ TODOS OS DADOS EXISTENTES!</translation>
+        <translation>Você tem certeza que deseja gravar a imagem? ISSO EXCLUIRÁ TODOS OS DADOS EXISTENTES!</translation>
     </message>
     <message>
-        <location line="+93"/>
-        <location line="+455"/>
+        <location line="+101"/>
+        <location line="+470"/>
         <source>Error</source>
         <translation></translation>
     </message>
     <message>
-        <location line="-816"/>
+        <location line="-815"/>
         <source>INSTALLED</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+478"/>
+        <location line="+462"/>
         <source>Display Mode Changed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -358,7 +407,7 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-571"/>
+        <location line="-616"/>
         <source>Waiting for SD card (settings partition)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -368,17 +417,27 @@ WARNING: This will erase all data on your SD card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+118"/>
         <source>Please wait while NOOBS initialises</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+378"/>
+        <location line="+337"/>
+        <source>SD card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Warning: incompatible Operating System(s) detected. The following OSes aren&apos;t supported on this revision of Raspberry Pi and may fail to boot or function correctly:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+42"/>
         <source>The install process will begin shortly.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -416,14 +475,14 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+323"/>
-        <location line="+339"/>
+        <location line="+338"/>
+        <location line="+341"/>
         <location line="+10"/>
         <source>Download error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-351"/>
         <source>Error downloading distribution list from Internet</source>
         <translation type="unfinished"></translation>
     </message>
@@ -433,7 +492,7 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+220"/>
         <source>Needed</source>
         <translation type="unfinished"></translation>
     </message>
@@ -443,7 +502,7 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+106"/>
         <source>Error downloading meta file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -463,14 +522,24 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-677"/>
-        <location line="+668"/>
+        <location line="+114"/>
+        <source>Reformat drive?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Are you sure you want to reformat the drive &apos;%1&apos; for use with NOOBS? All existing data on the drive will be deleted!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-810"/>
+        <location line="+686"/>
         <location line="+8"/>
         <source>No network access</source>
         <translation>Sem acesso de rede</translation>
     </message>
     <message>
-        <location line="-675"/>
+        <location line="-693"/>
         <source>Wired network access is required for this feature. Please insert a network cable into the network port.</source>
         <translation>Acesso de rede cabeado é necessário para este recurso. Por favor, insira um cabo de rede.</translation>
     </message>
@@ -478,7 +547,7 @@ Would you like to make this setting permanent?</source>
 <context>
     <name>MultiImageWriteThread</name>
     <message>
-        <location filename="multiimagewritethread.cpp" line="+52"/>
+        <location filename="multiimagewritethread.cpp" line="+55"/>
         <source>partitions.json invalid</source>
         <translation type="unfinished"></translation>
     </message>
@@ -488,17 +557,27 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+32"/>
+        <source>Operating system cannot require a system partition (1,5)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Operating system cannot claim both primary partitions 2 and 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Not enough disk space. Need %1 MB, got %2 MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+167"/>
         <source>Finish writing (sync)</source>
-        <translation type="unfinished">Finalizando a gravação</translation>
+        <translation>Finalizando a gravação</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+137"/>
         <source>File &apos;%1&apos; does not exist</source>
         <translation type="unfinished"></translation>
     </message>
@@ -528,7 +607,7 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-355"/>
+        <location line="-416"/>
         <source>RISCOS cannot be installed. RISCOS offset value mismatch.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -543,12 +622,7 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Operating system cannot require a system partition (1,2,5)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+67"/>
+        <location line="+107"/>
         <source>Fixed partition offset too low</source>
         <translation type="unfinished"></translation>
     </message>
@@ -558,7 +632,12 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
+        <source>Writing boot partition table</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Zero&apos;ing start of each partition</source>
         <translation type="unfinished"></translation>
     </message>
@@ -568,7 +647,7 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+85"/>
         <source>Error creating partition table</source>
         <translation type="unfinished"></translation>
     </message>
@@ -590,7 +669,7 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+12"/>
         <source>%1: Creating os_config.json</source>
         <oldsource>Creating os_config.json</oldsource>
         <translation type="unfinished"></translation>
@@ -608,20 +687,15 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+49"/>
         <source>%1: Error executing partition setup script</source>
         <oldsource>Error executing partition setup script</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>%1: Patching BCD file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>%1: Unmounting FAT partition</source>
-        <oldsource>Unmounting FAT partition</oldsource>
+        <oldsource>%1: Patching BCD file</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -631,13 +705,13 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+81"/>
         <source>Error creating file system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+42"/>
-        <location line="+62"/>
+        <location line="+71"/>
         <location line="+59"/>
         <source>Unknown compression format file extension. Expecting .lzo, .gz, .xz, .bz2 or .zip</source>
         <translation type="unfinished"></translation>
@@ -657,7 +731,7 @@ Would you like to make this setting permanent?</source>
 <context>
     <name>ProgressSlideshowDialog</name>
     <message>
-        <location filename="progressslideshowdialog.cpp" line="+138"/>
+        <location filename="progressslideshowdialog.cpp" line="+140"/>
         <source>%1 MB of %2 MB written (%3 MB/sec)</source>
         <translation>%1 MB de %2 MB gravado(s) (%3 MB/s)</translation>
     </message>
@@ -718,6 +792,11 @@ Would you like to make this setting permanent?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location line="+0"/>
+        <source>No wifi interfaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+183"/>
         <source>Authenticated but still waiting for DHCP lease</source>
         <translation type="unfinished"></translation>
@@ -735,7 +814,7 @@ Would you like to make this setting permanent?</source>
     <message>
         <location line="+35"/>
         <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location line="+6"/>
