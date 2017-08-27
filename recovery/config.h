@@ -21,7 +21,7 @@
 #define HOMEPAGE  "https://github.com/recalbox/recalbox-os/wiki"
 
 /* Location to download the list of available distributions from */
-#define DEFAULT_REPO_SERVER  "http://archive.recalbox.com/os_list.json"
+#define DEFAULT_REPO_SERVER  "http://archive.recalbox.com/v1/noobs/os_list_v3.json"
 /* Location to download the list of available distributions from
  * Multiple lists can be specified by space separating the URLs */
 //#define DEFAULT_REPO_SERVER  "http://downloads.raspberrypi.org/os_list_v3.json"
